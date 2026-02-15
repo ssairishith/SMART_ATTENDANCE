@@ -20,7 +20,8 @@ load_dotenv()
 # APP INITIALIZATION
 # ==================================================
 app = Flask(__name__)
-CORS(app)
+# Allow all origins for now to prevent CORS issues on mobile/web deployment
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ==================================================
 # IMPORT & REGISTER BLUEPRINTS

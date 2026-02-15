@@ -5,6 +5,7 @@ from flask import Blueprint, request, jsonify
 from numpy.linalg import norm
 from dotenv import load_dotenv
 from pymongo import MongoClient
+import os
 import insightface
 
 # ---------------- Blueprint ----------------
@@ -21,13 +22,8 @@ client = MongoClient(MONGO_URI)
 db = client["AttendanceDB"]
 students_col = db["students"]
 
-# ---------------- MODEL ----------------
-# Re-initializing model here might be expensive if not shared, 
-# but for safety/isolation we do it. Ideally model should be a singleton in app.py
-model = insightface.app.FaceAnalysis(name="buffalo_l")
-# Increase detection size for group photos
-# model.prepare(ctx_id=CTX_ID, det_size=(640, 640))
-model.prepare(ctx_id=CTX_ID, det_size=(640, 640))
+from utils.model_loader import get_model
+model = get_model()
 
 # ---------------- LOAD STUDENTS ----------------
 # In production, this should be cached or loaded once globally

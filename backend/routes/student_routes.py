@@ -37,11 +37,10 @@ COLLECTION = "students"
 CTX_ID = -1  # CPU mode
 
 # --------------------------------------------------
-# LOAD ARCFACE MODEL (ONCE)
+# LOAD ARCFACE MODEL (SINGLETON)
 # --------------------------------------------------
-print("Loading ArcFace model (CPU)...")
-model = insightface.app.FaceAnalysis(name="buffalo_l")
-model.prepare(ctx_id=CTX_ID, det_size=(640, 640))
+from utils.model_loader import get_model
+model = get_model()
 
 # --------------------------------------------------
 # CONNECT DB

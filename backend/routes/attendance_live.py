@@ -34,8 +34,8 @@ students_col = db["students"]
 fs = gridfs.GridFS(db)
 
 # ---------------- MODEL ----------------
-model = insightface.app.FaceAnalysis(name="buffalo_l")
-model.prepare(ctx_id=CTX_ID, det_size=(640, 640))
+from utils.model_loader import get_model
+model = get_model()
 
 # ---------------- LOAD STUDENTS ----------------
 names, rolls, encodings = [], [], []
