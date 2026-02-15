@@ -1,0 +1,393 @@
+﻿{
+    "classAverage":  98.2,
+    "className":  "Java Programming",
+    "debug":  {
+                  "dept":  "AIML",
+                  "queryUsed":  "regex",
+                  "sec":  "B",
+                  "studentsFound":  42
+              },
+    "section":  "AIML-B",
+    "students":  [
+                     {
+                         "attended":  15,
+                         "department":  "AIML",
+                         "name":  "arvind",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B10",
+                         "section":  "B",
+                         "totalClasses":  15
+                     },
+                     {
+                         "attended":  11,
+                         "department":  "AIML",
+                         "name":  "G.Nayana Reddy",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B13",
+                         "section":  "B",
+                         "totalClasses":  11
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "Vinay",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B15",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "Indupriya",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B19",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "harsha",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B20",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "SANKETHA",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B23",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "Tharun",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B25",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  10,
+                         "department":  "AIML",
+                         "name":  "Laxman",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B27",
+                         "section":  "B",
+                         "totalClasses":  10
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "Jogendar",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B29",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "rohith",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B31",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "rajesh",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B32",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "Dheeraj Reddy",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B35",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "Sree nilay",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B36",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "Sravanthi",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B37",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "N.Sreeja",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B39",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "vishnubharath",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B40",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  6,
+                         "department":  "AIML",
+                         "name":  "rohith",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B41",
+                         "section":  "B",
+                         "totalClasses":  6
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "Ashwith Reddy",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B42",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  10,
+                         "department":  "AIML",
+                         "name":  "saivishavnath",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B43",
+                         "section":  "B",
+                         "totalClasses":  10
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "Kowmudhi",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B45",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  6,
+                         "department":  "AIML",
+                         "name":  "kaushik",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B47",
+                         "section":  "B",
+                         "totalClasses":  6
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "guru",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B48",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "spraveen",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B49",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  6,
+                         "department":  "AIML",
+                         "name":  "rohan",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B50",
+                         "section":  "B",
+                         "totalClasses":  6
+                     },
+                     {
+                         "attended":  9,
+                         "department":  "AIML",
+                         "name":  "rishith",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B51",
+                         "section":  "B",
+                         "totalClasses":  9
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "vivek",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B52",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "hasrith",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B53",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "chakri",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B54",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "krishna",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B55",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "saiteja",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B56",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  10,
+                         "department":  "AIML",
+                         "name":  "kunal",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B59",
+                         "section":  "B",
+                         "totalClasses":  10
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "abhinai",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B61",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  6,
+                         "department":  "AIML",
+                         "name":  "Tilak",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B62",
+                         "section":  "B",
+                         "totalClasses":  6
+                     },
+                     {
+                         "attended":  8,
+                         "department":  "AIML",
+                         "name":  "aashish",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B63",
+                         "section":  "B",
+                         "totalClasses":  8
+                     },
+                     {
+                         "attended":  7,
+                         "department":  "AIML",
+                         "name":  "praveen",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B64",
+                         "section":  "B",
+                         "totalClasses":  7
+                     },
+                     {
+                         "attended":  5,
+                         "department":  "AIML",
+                         "name":  "s  sai rishith",
+                         "overallPercentage":  100.0,
+                         "rollNo":  "24EG107B57",
+                         "section":  "B",
+                         "totalClasses":  5
+                     },
+                     {
+                         "attended":  19,
+                         "department":  "AIML",
+                         "name":  "TejaVardhini",
+                         "overallPercentage":  95.0,
+                         "rollNo":  "24EG107B05",
+                         "section":  "B",
+                         "totalClasses":  20
+                     },
+                     {
+                         "attended":  14,
+                         "department":  "AIML",
+                         "name":  "ABHIRAM",
+                         "overallPercentage":  93.3,
+                         "rollNo":  "24EG107B02",
+                         "section":  "B",
+                         "totalClasses":  15
+                     },
+                     {
+                         "attended":  12,
+                         "department":  "AIML",
+                         "name":  "srujan",
+                         "overallPercentage":  92.3,
+                         "rollNo":  "24EG107B08",
+                         "section":  "B",
+                         "totalClasses":  13
+                     },
+                     {
+                         "attended":  18,
+                         "department":  "AIML",
+                         "name":  "abhinav",
+                         "overallPercentage":  85.7,
+                         "rollNo":  "24EG107B01",
+                         "section":  "B",
+                         "totalClasses":  21
+                     },
+                     {
+                         "attended":  16,
+                         "department":  "AIML",
+                         "name":  "Ashish kumar",
+                         "overallPercentage":  80.0,
+                         "rollNo":  "24EG107B04",
+                         "section":  "B",
+                         "totalClasses":  20
+                     },
+                     {
+                         "attended":  11,
+                         "department":  "AIML",
+                         "name":  "manikanta",
+                         "overallPercentage":  78.6,
+                         "rollNo":  "24EG107B09",
+                         "section":  "B",
+                         "totalClasses":  14
+                     }
+                 ],
+    "studentsWithRecords":  42,
+    "totalStudents":  42
+}

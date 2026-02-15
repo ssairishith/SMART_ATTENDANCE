@@ -1,0 +1,14 @@
+flask
+flask-cors
+flask-bcrypt
+PyJWT
+python-dotenv
+pymongo
+opencv-python-headless
+numpy
+insightface
+onnxruntime
+pandas
+openpyxl
+
+gunicorn

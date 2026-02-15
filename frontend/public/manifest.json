@@ -1,0 +1,30 @@
+{
+  "short_name": "Smart Attend",
+  "name": "Smart Attendance System",
+  "description": "Advanced AI-based Smart Attendance Management System using Face Recognition.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "logo512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#f8fafc",
+  "orientation": "portrait"
+}
