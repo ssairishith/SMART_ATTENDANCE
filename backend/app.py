@@ -46,6 +46,17 @@ from routes.manual_attendance import manual_attendance_bp
 app.register_blueprint(manual_attendance_bp)
 
 # ==================================================
+# PRE-WARM SERVICE (Load model & data once)
+# ==================================================
+from utils.model_loader import get_model
+from utils.student_data import get_student_data
+with app.app_context():
+    print("Pre-warming AI Service...")
+    get_model()
+    get_student_data()
+    print("Pre-warm complete.")
+
+# ==================================================
 # DEBUG: SHOW ALL REGISTERED ROUTES
 # ==================================================
 print("=== REGISTERED ROUTES ===")

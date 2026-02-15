@@ -35,25 +35,20 @@ fs = gridfs.GridFS(db)
 
 # ---------------- MODEL ----------------
 from utils.model_loader import get_model
+from utils.student_data import get_student_data
 model = get_model()
-
-# ---------------- LOAD STUDENTS ----------------
-names, rolls, encodings = [], [], []
-
-for doc in students_col.find({"model": "arcface"}):
-    names.append(doc["name"])
-    rolls.append(str(doc["rollNo"]))
-    encodings.append(np.array(doc["face_encoding"], dtype=float))
-
-# ---------------- UTILS ----------------
-def cosine_sim(a, b):
-    return float(np.dot(a, b) / (norm(a) * norm(b)))
 
 # ---------------- LIVE ATTENDANCE ----------------
 @live_attendance_bp.route("/live", methods=["POST"])
 @token_required
 def live_attendance():
     teacher = request.teacher
+    
+    # Load singleton data
+    data = get_student_data()
+    names = data["names"]
+    rolls = data["rolls"]
+    encodings = data["encodings"]
 
     # -------- Metadata --------
     course = request.form.get("course", "COURSE")
@@ -84,16 +79,18 @@ def live_attendance():
 
             for face in faces:
                 emb = face.embedding / norm(face.embedding)
-                sims = [cosine_sim(emb, k) for k in encodings]
-                idx = int(np.argmax(sims))
+                
+                if encodings.shape[0] > 0:
+                    sims = np.dot(emb, encodings)
+                    idx = int(np.argmax(sims))
 
-                if sims[idx] >= ARC_THRESHOLD:
-                    roll = rolls[idx]
-                    if roll not in attendance:
-                        attendance[roll] = {
-                            "name": names[idx],
-                            "time": datetime.now().strftime("%H:%M:%S")
-                        }
+                    if sims[idx] >= ARC_THRESHOLD:
+                        roll = rolls[idx]
+                        if roll not in attendance:
+                            attendance[roll] = {
+                                "name": names[idx],
+                                "time": datetime.now().strftime("%H:%M:%S")
+                            }
     else:
         # Fallback: try server-side camera (for testing)
         try:
@@ -114,16 +111,18 @@ def live_attendance():
 
                 for face in faces:
                     emb = face.embedding / norm(face.embedding)
-                    sims = [cosine_sim(emb, k) for k in encodings]
-                    idx = int(np.argmax(sims))
+                    
+                    if encodings.shape[0] > 0:
+                        sims = np.dot(emb, encodings)
+                        idx = int(np.argmax(sims))
 
-                    if sims[idx] >= ARC_THRESHOLD:
-                        roll = rolls[idx]
-                        if roll not in attendance:
-                            attendance[roll] = {
-                                "name": names[idx],
-                                "time": datetime.now().strftime("%H:%M:%S")
-                            }
+                        if sims[idx] >= ARC_THRESHOLD:
+                            roll = rolls[idx]
+                            if roll not in attendance:
+                                attendance[roll] = {
+                                    "name": names[idx],
+                                    "time": datetime.now().strftime("%H:%M:%S")
+                                }
 
             cap.release()
         except Exception as e:

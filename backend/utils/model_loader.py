@@ -10,8 +10,11 @@ def get_model():
     """
     global _model
     if _model is None:
-        print(">>> Loading ArcFace model (CPU Singleton) <<<")
-        # Ensure we use buffalo_l as established in the project
-        _model = insightface.app.FaceAnalysis(name="buffalo_l")
+        print(">>> Loading AI Model (buffalo_s Singleton) <<<")
+        # buffalo_s is a smaller, faster ensemble than buffalo_l (512MB RAM safe)
+        _model = insightface.app.FaceAnalysis(
+            name="buffalo_s", 
+            providers=['CPUExecutionProvider']
+        )
         _model.prepare(ctx_id=-1, det_size=(640, 640))
     return _model

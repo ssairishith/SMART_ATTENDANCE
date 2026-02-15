@@ -23,34 +23,12 @@ db = client["AttendanceDB"]
 students_col = db["students"]
 
 from utils.model_loader import get_model
+from utils.student_data import get_student_data
+
 model = get_model()
 
-# ---------------- LOAD STUDENTS ----------------
-# In production, this should be cached or loaded once globally
-names = []      # List of names
-rolls = []      # List of roll numbers
-encodings = []  # Numpy array of shape (N, 512)
-
-def load_encodings():
-    global names, rolls, encodings
-    temp_names, temp_rolls, temp_encodings = [], [], []
-    for doc in students_col.find({"model": "arcface"}):
-        temp_names.append(doc["name"])
-        temp_rolls.append(str(doc["rollNo"]))
-        # Assuming finding includes standard 512d embeddings
-        emb = np.array(doc["face_encoding"], dtype=float)
-        # Normalize immediately upon loading
-        emb = emb / norm(emb)
-        temp_encodings.append(emb)
-    
-    names = temp_names
-    rolls = temp_rolls
-    if temp_encodings:
-        encodings = np.stack(temp_encodings) # Shape (N, 512)
-    else:
-        encodings = np.empty((0, 512))
-
-load_encodings() # Load on startup
+def get_current_data():
+    return get_student_data()
 
 
 
@@ -68,8 +46,10 @@ def recognize_frame():
         if frame is None:
             return jsonify({"error": "Invalid image format or corrupted file"}), 400
 
-        if encodings.shape[0] == 0:
-            load_encodings()
+        data = get_current_data()
+        names = data["names"]
+        rolls = data["rolls"]
+        encodings = data["encodings"]
 
         faces = model.get(frame)
         
@@ -88,11 +68,11 @@ def recognize_frame():
             emb = face.embedding
             emb = emb / norm(emb)
             
-            
             match_info = {"name": "Unknown", "roll": "Unknown", "confidence": 0}
             
             if encodings.shape[0] > 0:
-                sims = np.dot(emb, encodings.T)
+                # Use dot product for normalized vectors (equivalent to cosine similarity)
+                sims = np.dot(emb, encodings)
                 best_idx = np.argmax(sims)
                 max_sim = sims[best_idx]
                 
